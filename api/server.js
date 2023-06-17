@@ -10,13 +10,20 @@ import messageRoute from "./routes/message.route.js";
 import reviewRoute from "./routes/review.route.js";
 import authRoute from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
-import cors from "cors"
+import cors from "cors";
 
 dotenv.config();
 const app = express();
 
 // middlewares
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+// app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin:
+      "https://648d0a3212fa58330a40212b--famous-kataifi-c20608.netlify.app",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
