@@ -36,7 +36,7 @@ const register = () => {
     try {
       await newRequest.post("/auth/register", {...user, img: url})
       console.log(user)
-      navigate("/")
+      navigate("/login")
     } catch (error) {
       console.log(error)
     }
